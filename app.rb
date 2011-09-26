@@ -6,7 +6,7 @@ require 'builder'
 
 set :run, true
 set :cache_enabled, true
-set :haml, :escape_html => true
+set :haml, :escape_html => true, :format => :html5
 
 Sinatra::Base.register Sinatra::StaticAssets
 Sinatra::Base.register Sinatra::Cache
@@ -27,7 +27,7 @@ helpers do
 end
 
 get '/' do
-  'hello'
+  haml :index
 end
 
 get '/rss.xml' do
