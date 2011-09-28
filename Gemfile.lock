@@ -54,6 +54,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby
   bson_ext
+  builder
   haml
   heroku
   mongoid
