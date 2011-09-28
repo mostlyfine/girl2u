@@ -31,7 +31,7 @@ get '/' do
 end
 
 get '/rss.xml' do
-  @albums = Album.active.order_by(:created_at.desc)
+  @albums = Album.active.limit(20).order_by(:created_at.desc)
   content_type 'text/xml'
   builder :feed
 end
