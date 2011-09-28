@@ -2,6 +2,7 @@ source :rubygems
 
 gem 'sinatra'
 gem 'haml'
+gem 'builder'
 
 gem 'bcrypt-ruby', :require => "bcrypt"
 gem 'mongoid'
