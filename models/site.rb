@@ -6,5 +6,8 @@ class Site
 
   field :name, :type => String
   field :xpath, :type => String
-  field :deleted_at, :type => DateTime
+  field :active, :type => Boolean, :default => true
+
+  scope :active, where(:active => true)
+  scope :inactive, where(:active => false)
 end
