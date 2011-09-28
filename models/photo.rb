@@ -1,13 +1,10 @@
 require 'mongoid'
 
-class Site
+class Photo
   include Mongoid::Document
 
-  field :name, :type => String
-  field :xpath, :type => String
+  field :url, :type => String
   field :active, :type => Boolean, :default => true
-
-  references_many :albums
 
   scope :active, where(:active => true)
   scope :inactive, where(:active => false)
